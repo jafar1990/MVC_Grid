@@ -1,0 +1,29 @@
+﻿@model MVC_Grid.Models.Customer
+
+@using (Html.BeginForm("Edit", "Home", FormMethod.Post))
+{
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>Customer ID :</td>
+            <td>@Model.CustomerID</td>
+        </tr>
+        <tr>
+            <td>Company Name :</td>
+            <td>@Model.CompanyName</td>
+        </tr>
+        <tr>
+            <td>Contact Name :</td>
+            <td>@Model.ContactName</td>
+        </tr>
+        <tr>
+            <td>Country :</td>
+            <td>@Model.Country</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Edit"formaction="/Customer/edit/@Model.CustomerID" />
+                <input type="submit" value="Cancel"formaction="/Customer/index" />
+            </td>
+        </tr>
+    </table>
+}
